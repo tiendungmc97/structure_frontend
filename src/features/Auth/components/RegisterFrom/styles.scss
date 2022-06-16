@@ -1,0 +1,22 @@
+.register {
+    &__avatar {
+      margin: 0 auto;
+      margin-bottom: 1rem;
+    }
+    &__title {
+      text-align: center;
+    }
+    &__btn{
+        width: 100%;
+        padding: 16px;
+    }
+    .col{
+      padding-left: 0;
+      padding-right: 4px;
+    }
+    .col:last-child{
+      padding-left: 4px;
+      padding-right: 0;
+    }
+  }
+  

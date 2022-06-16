@@ -1,0 +1,113 @@
+.footer {
+    margin-top: 30px;
+    @include Relative;
+    width: 100%;
+    height: 506px;
+    background-color: black;
+    &Container {
+      padding: 75px 75px 0 75px;
+      h5 {
+        color: $colorgray-200;
+      }
+      &Content {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 30px;
+        margin-bottom: 30px;
+        border-bottom: 1px solid red;
+        div {
+          width: 280px;
+          p {
+            font-size: 15px;
+            color: $colorgray-500;
+          }
+          div {
+            display: flex;
+            p {
+              padding-left: 10px;
+            }
+            .icon {
+              font-size: 20px;
+              color: $colorgray-500;
+            }
+          }
+          a {
+            padding: 0 0 15px 0;
+            width: 200px;
+            color: $colorgray-500;
+            text-decoration: none;
+            &:hover {
+              color: red;
+            }
+          }
+          .linkFacebook {
+            background-color: $colorfacebook;
+            a {
+              padding: 2px 7px;
+            }
+          }
+          .linkInstagram {
+            background-color: $colorinstagram;
+            a {
+              padding: 3px 6px;
+            }
+          }
+          .linkTwitter {
+            background-color: $colortwitter;
+            a {
+              padding: 3px 9px;
+            }
+          }
+          .linkPinterest {
+            background-color: $colorpinterest;
+            a {
+              padding: 2px 7.5px;
+            }
+          }
+          .linkFeed {
+            background-color: $colortooltip;
+            a {
+              padding: 2px 6px;
+            }
+          }
+          .link {
+            height: 35px;
+            width: 35px;
+            border-radius: 50%;
+            margin-right: 15px;
+            a {
+              color: $colorwhite;
+              font-size: 18px;
+            }
+          }
+          .inline {
+            width: 50px;
+            height: 3px;
+            background-color: red;
+            margin: 20px 0;
+          }
+          .iconFacebook {
+            padding: 17.5px;
+            background-color: blue;
+            color: white !important;
+          }
+        }
+      }
+  
+      &Content2 {
+        display: flex;
+        margin-bottom: 50px;
+        input {
+          margin-left: 50px;
+          width: 300px;
+          padding: 5px 10px;
+          outline: none;
+        }
+      }
+      .nameDesign {
+        text-align: center;
+        color: $colorgray-700;
+        font-size: 18px;
+      }
+    }
+  }

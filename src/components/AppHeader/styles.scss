@@ -1,0 +1,14 @@
+@import '../../styles/variables';
+.header {
+  &__main {
+    position: relative;
+    padding: 1rem;
+    background-color: $c-background-head;
+    color: $c-text-head;
+    .col:last-child{
+        text-align: right;
+    }
+  }
+  &__nav {
+  }
+}
