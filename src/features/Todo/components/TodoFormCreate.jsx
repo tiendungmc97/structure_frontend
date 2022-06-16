@@ -1,9 +1,5 @@
-import { unwrapResult } from '@reduxjs/toolkit';
-import { login } from 'features/Auth/userSlice';
 import { useSnackbar } from 'notistack';
 import PropTypes from 'prop-types';
-import React from 'react';
-import { useDispatch } from 'react-redux';
 import TodoForm from './TodoForm';
 TodoFormCreate.propTypes = {
   closeDialog: PropTypes.func,
@@ -11,22 +7,20 @@ TodoFormCreate.propTypes = {
 
 function TodoFormCreate({ closeDialog }) {
   const { enqueueSnackbar } = useSnackbar();
-  const dispatch = useDispatch();
+
 
   const handleSubmit = async (val) => {
     try {
-      const action = login(val);
-      const resultAction = await dispatch(action);
-      unwrapResult(resultAction);
+      console.log(val);
 
       if (closeDialog) {
         closeDialog();
       }
     } catch (error) {
-      enqueueSnackbar(error.message, { variant: 'error' });
+      enqueueSnackbar("tao that bai", { variant: 'error' });
     }
   };
-  return <TodoForm handleSubmit={handleSubmit} />;
+  return <TodoForm handleSubmit={handleSubmit} handleClose={closeDialog}/>;
 }
 
 export default TodoFormCreate;

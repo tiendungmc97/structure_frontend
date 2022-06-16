@@ -36,28 +36,16 @@ function AppHeader(props) {
       <Row className="header__main">
         <Col sx={8}>
           {customer?.role === ROLE.CUSTOMER && <div className="pointer">Todo</div>}
-          {customer?.role === ROLE.ADMIN && (
-            <>
-              <Row>
-                <Col>
-                  <Button>
-                    <NavLink to="/home">Admin</NavLink>
-                  </Button>
-                  <Button>
-                    <NavLink to="/user/slice">Ảnh bìa</NavLink>
-                  </Button>
-                  <Button>
-                    <NavLink to="/tre-em">CHildren</NavLink>
-                  </Button>
-                </Col>
-              </Row>
-            </>
-          )}
+          <Row>
+            <Col>
+              <Button>
+                <NavLink to="/todo">Todo</NavLink>
+              </Button>
+            </Col>
+          </Row>
         </Col>
         <Col sx={4}>
-          {customer?.role === ROLE.CUSTOMER && (
-              <Notification />
-          )}
+          {customer?.role === ROLE.CUSTOMER && <Notification />}
           <Search />
           {isLoggedInUser && <UserHeader />}
           {!isLoggedInUser && (

@@ -12,7 +12,7 @@ function App(props) {
     <div>
       <AppHeader />
       <Routes>
-        <Route path="todo/*" element={<Todo/>}/>
+        <Route path="todo" element={<Todo/>}/>
       </Routes>
     </div>
   );

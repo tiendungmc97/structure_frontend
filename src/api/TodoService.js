@@ -7,33 +7,32 @@ const API_ENDPOINT = {
   UPDATE_TODO: '/todo/todo/update',
   DELETE_TODO: '/todo/todo/delete',
 };
-class TransactionService {
+class TodoService {
   constructor() {
-    if (TransactionService._instance) {
-      return TransactionService._instance;
+    if (TodoService._instance) {
+      return TodoService._instance;
     }
-    TransactionService._instance = this;
+    TodoService._instance = this;
   }
-  createSlice(payload) {
-    return Http.post(API_ENDPOINT.CREATE_TODO, payload);
-  }
-  getListSlice() {
+  getList() {
     return Http.get(API_ENDPOINT.LIST_TODO);
   }
-
-  getSlice(id) {
+  get(id) {
     return Http.get(API_ENDPOINT.GET_TODO + `?id=${id}`);
   }
+  create(payload) {
+    return Http.post(API_ENDPOINT.CREATE_TODO, payload);
+  }
 
-  updateSlice(id, data) {
+  update(id, data) {
     return Http.post(API_ENDPOINT.UPDATE_TODO + `?id=${id}`, data);
   }
 
-  deleteSlice(id) {
+  delete(id) {
     return Http.post(API_ENDPOINT.DELETE_TODO + `?id=${id}`);
   }
 }
 
-const Service = new TransactionService();
+const Service = new TodoService();
 
 export default Service;
