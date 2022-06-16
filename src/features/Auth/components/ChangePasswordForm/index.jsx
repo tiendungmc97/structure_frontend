@@ -2,7 +2,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import { LockOutlined } from '@mui/icons-material';
 import { Avatar, Button, CircularProgress } from '@mui/material';
 import InputFieldMui from 'components/form-controls/InputFieldMui';
-import InputPassword from 'components/form-controls/InputPassword';
+import InputPassword from 'components/form-controls/InputPasswordMui';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { useForm } from 'react-hook-form';

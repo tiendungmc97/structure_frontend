@@ -2,7 +2,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import { LockOutlined } from '@mui/icons-material';
 import { Avatar, Button, CircularProgress, Typography } from '@mui/material';
 import InputFieldMui from 'components/form-controls/InputFieldMui';
-import InputPassword from 'components/form-controls/InputPassword';
+import InputPasswordMui from 'components/form-controls/InputPasswordMui';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { useForm } from 'react-hook-form';
@@ -69,10 +69,10 @@ function RegisterForm(props) {
         </Row>
         <Row>
           <Col>
-            <InputPassword name="password" form={form} label="Mật khẩu" />
+            <InputPasswordMui name="password" form={form} label="Mật khẩu" />
           </Col>
           <Col>
-            <InputPassword name="retypePassword" form={form} label="Nhập lại" />
+            <InputPasswordMui name="retypePassword" form={form} label="Nhập lại" />
           </Col>
         </Row>
         <Button type="submit" variant="contained" className="register__btn" disabled={isSubmitting}>

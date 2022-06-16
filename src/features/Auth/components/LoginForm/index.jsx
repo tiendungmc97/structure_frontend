@@ -2,7 +2,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import { LockOutlined } from '@mui/icons-material';
 import { Avatar, Button, CircularProgress } from '@mui/material';
 import InputFieldMui from 'components/form-controls/InputFieldMui';
-import InputPassword from 'components/form-controls/InputPassword';
+import InputPasswordMui from 'components/form-controls/InputPasswordMui';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { useForm } from 'react-hook-form';
@@ -43,7 +43,7 @@ function LoginForm({handleSubmit, handleRegister}) {
       <div className='login__title'>Đăng nhập</div>
       <form onSubmit={form.handleSubmit(handleSubmitForm)}>
         <InputFieldMui name="username" form={form} label="Tài khoản" />
-        <InputPassword name="password" form={form} label="Mật khẩu" />
+        <InputPasswordMui name="password" form={form} label="Mật khẩu" />
         <Button
           fullWidth
           type="submit"
