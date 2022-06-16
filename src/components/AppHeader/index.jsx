@@ -15,7 +15,7 @@ AppHeader.propTypes = {};
 
 function AppHeader(props) {
   const customer = useSelector((state) => state.user.current.customer);
-  const isLoggedInUser = !!customer?.id;
+  const isLoggedInUser = !!customer?.id || true;
 
   // open dialog
   const [mode, setMode] = useState(MODE.LOGIN);
@@ -35,7 +35,7 @@ function AppHeader(props) {
     <div className="header">
       <Row className="header__main">
         <Col sx={8}>
-          {customer?.role === ROLE.CUSTOMER && <div className="pointer">Hà Trung Store</div>}
+          {customer?.role === ROLE.CUSTOMER && <div className="pointer">Todo</div>}
           {customer?.role === ROLE.ADMIN && (
             <>
               <Row>

@@ -1,14 +1,14 @@
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import LockIcon from '@mui/icons-material/Lock';
 import LogoutIcon from '@mui/icons-material/Logout';
 import PersonIcon from '@mui/icons-material/Person';
-import LockIcon from '@mui/icons-material/Lock';
 import SettingsIcon from '@mui/icons-material/Settings';
 import { Dialog, DialogContent, Menu, MenuItem, Typography } from '@mui/material';
-import * as React from 'react';
-import '../styles.scss';
-import { useDispatch } from 'react-redux';
-import { logout } from 'features/auth/userSlice';
 import ChangePassword from 'features/Auth/components/ChangePassword';
+import { logout } from 'features/Auth/userSlice';
+import * as React from 'react';
+import { useDispatch } from 'react-redux';
+import '../styles.scss';
 
 const MODE = {
   CHANGEPASSWORD: 'change_password'

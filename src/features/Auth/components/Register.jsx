@@ -1,5 +1,5 @@
 import { unwrapResult } from '@reduxjs/toolkit';
-import { login, register, setPassword } from 'features/auth/userSlice';
+import { login, register, setPassword } from 'features/Auth/userSlice';
 import { useSnackbar } from 'notistack';
 import PropTypes from 'prop-types';
 import React from 'react';

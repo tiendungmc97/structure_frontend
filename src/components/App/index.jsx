@@ -1,4 +1,5 @@
 import AppHeader from 'components/AppHeader';
+import Todo from 'features/Todo';
 import { useSelector } from 'react-redux';
 import { Route, Routes } from 'react-router-dom';
 
@@ -11,6 +12,7 @@ function App(props) {
     <div>
       <AppHeader />
       <Routes>
+        <Route path="todo/*" element={<Todo/>}/>
       </Routes>
     </div>
   );
