@@ -2,13 +2,27 @@
 .header {
   &__main {
     position: relative;
-    padding: 1rem;
     background-color: $c-background-head;
     color: $c-text-head;
-    .col:last-child{
-        text-align: right;
+    .col{
+      button{
+        margin: 0;
+        padding: 0;
+        a{
+          color: $c-text-head;
+          padding: 0.5rem;
+        }
+      }
+    }
+    .col:last-child {
+      justify-content: center;
+      align-self: center;
+      text-align: right;
     }
   }
   &__nav {
+  }
+  .active{
+    background-color: #34495e;
   }
 }
